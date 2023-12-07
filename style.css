@@ -1,0 +1,278 @@
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+.navbar{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.carousel-item{
+    min-height: 400px;
+}
+.carousel-caption{
+    bottom: 220px;
+    z-index: 2;
+}
+.carousel-caption h5{
+    font-size: 70px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 25px;
+}
+.carousel-caption p{
+    margin: 10px auto;
+    font-size: 18px;
+}
+.carousel-inner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+.services{
+    padding: 80px 0;
+}
+.prototipo{
+    margin: auto;
+    align-items: center;
+    margin-bottom: 0px;
+    min-height: 100vh;
+    padding-top:100PX;
+}
+.prototipo h1{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    color: var(--colora);
+    font-size: var(--titulo);
+    font-weight: 600;
+    margin-bottom: 45PX;
+}
+
+.proyectos{/* contenedor de  cards */
+    margin: auto;
+    width: 90%;
+    margin-bottom: 0px;
+    margin-top: 0;    
+    padding-top: 2vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));/* modifica automaticamente los grid haciendolo responseve */
+    grid-gap: 0px;
+}
+
+.card{ 
+    transition: all .6s cubic-bezier(0.175, 0.885, 0, 1);
+    opacity: 1;
+    background-color: var(--colord);
+   /*  width: 190px; */
+  /*   max-width: 190px; */
+    min-width: 170px;
+    max-height: 350px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 8px 4px -7px rgba(0, 0, 0,0.1);
+    margin-bottom: 35px;
+    grid-column: span 1;
+    justify-self: center;/* centra css grid */
+    justify-items: center;
+    border: 1px solid var(--colorc);
+    cursor: pointer;
+}
+
+.card:hover{
+    box-shadow: 0px 15px 6px -4px rgba(0, 0, 0,0.2);
+    transform: scale(1.10, 1.10);
+    opacity: 5;
+    border: none;
+}
+
+.fa-github{
+    margin-top: 3px;
+    font-size: 30px;
+    transition: 0.8s ease-in-out;
+    color: var(--colorb);
+}
+
+.fa-github:hover{
+    color: var(--colorb);
+}
+
+.card__img{
+    visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 190px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* cambio de imagen para cada card de proyecto */
+.card--1 .card__img--hover{
+    background-image:  url("../img/imagen\ de\ programacion.jpg")
+   /*  background-position: top 5%; */
+}
+
+.card--2 .card__img--hover{
+    background-image: url("../img/excel.jpg")
+}
+
+.card--3 .card__img--hover{
+    background-image: url("../img/ensamblaje.jpg")
+}
+
+.card--4 .card__img--hover{
+    background-image: url("../img/computacion\ basica.jpg")
+}
+.card--5 .card__img--hover{
+    background-image: url("../img/PROTOTIPO\ EN\ FIGMA.jpg")
+}
+
+.card__info-hover{
+    position: absolute;
+    width: 50%;
+    padding: 10px;
+    opacity: 0;
+    top: 0;
+}
+
+.card__img--hover{
+    transition: 0.4s all ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50%;
+    position: absolute;
+    height: 195px;
+    
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    top: 0;
+}
+
+.card__info{
+    z-index: 2;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 50px;
+}
+
+.card__category{
+    text-transform: uppercase;
+    font-size:  12px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    color: var(--colorTextos);
+}
+
+.card__title{
+    margin: 5px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--colorTextos);
+}
+
+.card__by{
+    font-size: 15px;
+   
+    width: 100%;
+}
+.card__by i{
+    display: flex;
+    justify-content: space-evenly;
+    /* -ms-flex-item-align: auto; */
+}
+
+.card__author{
+    font-weight: 600;
+    text-decoration: none;
+}
+/* efecto de transparencia */
+.card:hover .card__img--hover{
+    height: 100%;
+    opacity: 0.3;
+}
+.card:hover .card__info{
+    background: transparent;
+    position: relative;
+    font-weight: 800;
+}
+
+.card:hover .card__info-hover{
+    opacity: 1;
+}
+
+.card__author {
+    color: var(--colorb);
+    font: 25px;
+    position: relative;
+}
+.box-icons i{
+    font-size: 40px;
+}
+.box-iconns h3{
+    font-size: 20px;
+    font-weight: 800;
+}
+,product{
+    padding: 80px 0;
+}
+.card img{
+    width: 150px;
+    height: 150px;
+}
+.banner{
+    padding: 50px 0;
+    margin-bottom: 80px;
+    background-color: #EAE5DF;
+}
+.banner he{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.banner img{
+    width: 300px;
+}
+@media(max-width:767px){
+
+    .carousel-item{
+        min-height: 500px;
+    }
+    .carousel-item img{
+        height: 500px;
+    }
+    .carousel-caption{
+        bottom: 30px;
+    }
+    .carousel-caption h5{
+        font-size: 50px;
+        margin-top: 0;
+    }
+    .carousel-caption p{
+        width: 100%;
+        font-size: 16px;
+    }
+    .services{
+        padding: 30px 0;
+    }
+    .product{
+        padding: 30px 0 0 0;
+    }
+    .banner{
+        margin-bottom: 30px;
+    }
+
+}
